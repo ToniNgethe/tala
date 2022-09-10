@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tala">Tala</string>
+    <string name="okay">Okay</string>
+    <string name="paymentMade">Payment made successfully</string>
+    <string name="loanApplicationProcess">Loan application process initiated! You\'ll receive instructions of next steps</string>
+    <string name="loanApplied">Loan applied successfully! Money will be deposited in your account</string>
+    <string name="awarded">You have successfully been awarded loan of %s %s",</string>
+    <string name="loanLimit">You have a loan limit of %s %s",</string>
+    <string name="redirectToWebPage">Redirecting you shortly to our web page</string>
+    <string name="trackProgress">Track your progress</string>
+    <string name="growLimit">Grow your limit up to %s %d"</string>
+    <string name="applyLoan">Apply for a loan</string>
+    <string name="repayLoan">Repay on time to get loans up to %s %d</string>
+    <string name="loanFullyPaid">Your loan is fully paid</string>
+    <string name="applyForLoan">Apply for another loan any time and grow your limit</string>
+    <string name="applyNow">APPLY NOW</string>
+    <string name="talaHelpedMe">"Tala helped me\nwith my dream"</string>
+    <string name="readMore">READ MORE</string>
+</resources>

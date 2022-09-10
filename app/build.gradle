@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+android {
+    namespace 'com.tala'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.tala"
+        minSdk 24
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.2.0'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion Versions.COMPOSE_COMPILER
+    }
+}
+
+dependencies {
+    implementation(Dependencies.ktxCore)
+    implementation(Dependencies.lifecycleRuntime)
+    implementation(Dependencies.activityCompose)
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composeToolingPreview)
+    implementation(Dependencies.composeMaterial)
+    debugImplementation(Dependencies.composeTooling)
+    debugImplementation(Dependencies.accompanist)
+    implementation(Dependencies.kotlinSerializationJson)
+
+    //Dagger - Hilt
+    implementation Dependencies.hilt
+    kapt Dependencies.hiltCompiler
+    implementation Dependencies.hiltNavigationCompose
+
+    implementation project(path: ":core-design")
+    implementation project(path: ":core-data")
+    implementation project(path: ":core-resources")
+
+    implementation project(path: ":features:feature-loans")
+    implementation project(path: ":features:feature_selected_loan")
+}
