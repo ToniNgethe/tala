@@ -2,6 +2,9 @@
 
 A tala loan app created using jetpack compose
 
+![web_1920___1](https://user-images.githubusercontent.com/23453229/189468922-3cc5fb06-68ed-4368-98c2-ba59bd7d5b4a.png)
+
+
 ## Features
 The app has the following features:
 1. View a list of your loans
